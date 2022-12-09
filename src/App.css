@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bg {
+  background-color: #9ba9eb;
+  padding: 20px;
+}
+.app-logo {
+  width: 200px;
+  margin-bottom: 5px;
+}
+.user-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: auto;
+  margin-left: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.results-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 10px;
+}
+.flex-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form {
+  background-color: #454f84;
+  min-width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.feature-text {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #ffffff;
+}
+.search-bar {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.input-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.logo {
+  width: 20px;
+  margin: 6px;
+}
+@media screen and (max-width: 768px) {
+  .user-container {
+    flex-direction: column;
+  }
+  .container-image {
+    order: 1;
+  }
+  .form {
+    order: 2;
   }
 }
+.user-text {
+  border-right: 1px solid black;
+  border: none;
+  outline: none;
+}
+.add-btn {
+  margin-left: 80%;
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  background-color: #0b69ff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: #f8fafc;
+}
+.container-image {
+  width: 200px;
+}
+.password-text {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #f8fafc;
+  margin-top: 0;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.password-number {
+  font-family: 'Roboto';
+  font-size: 10px;
+  color: #f8fafc;
+}
+.password-container {
+  border: 1px solid #ffffff;
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+.search-bar-container {
+  max-width: 200px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .password-text {
+    font-size: 12px;
+  }
+  .password-container {
+    width: 25px;
+    height: 15px;
+  }
+  .user-text {
+    width: 100px;
+    height: 20px;
+  }
+  .search-logo {
+    margin: 2px;
+  }
+  .password-text {
+    font-size: 12px;
+  }
+}
+.search-logo {
+  width: 20px;
+  margin: 5px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hr-line {
+  color: #b6c3ca;
+}
+.no-password {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin: auto;
+}
+.checkbox-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.list-item {
+  border: 1px solid #b6c3ca;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+}
+.suffix-view {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: center;
+  padding: 15px;
+}
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.delete-icon {
+  width: 30px;
+}
+.stars {
+  width: 50px;
+}
+.amber {
+  background-color: #f59e0b;
 }
 
-.App-link {
-  color: #61dafb;
+.blue {
+  background-color: #0b69ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.orange {
+  background-color: #f97316;
+}
+
+.emerald {
+  background-color: #10b981;
+}
+
+.teal {
+  background-color: #14b8a6;
+}
+
+.red {
+  background-color: #b91c1c;
+}
+
+.light-blue {
+  background-color: #0ea5e9;
 }
